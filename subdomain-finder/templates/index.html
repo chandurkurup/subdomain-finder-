@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Private Subdomain Finder</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome, {{ username }}</h1>
+    <input id="domainInput" type="text" placeholder="example.com">
+    <div class="buttons">
+        <button onclick="findSubdomains()">Find Subdomains</button>
+        <button onclick="lookupDNS()">DNS Lookup</button>
+        <button onclick="lookupWHOIS()">WHOIS Lookup</button>
+        <button onclick="toggleTheme()">Toggle Dark/Light</button>
+    </div>
+    <div id="progress" class="hidden">Searching...</div>
+    <h2>Subdomains</h2>
+    <ul id="subResults"></ul>
+    <button onclick="exportTXT()">Export TXT</button>
+    <button onclick="exportCSV()">Export CSV</button>
+    <h2>DNS Result</h2>
+    <pre id="dnsResult"></pre>
+    <h2>WHOIS Result</h2>
+    <pre id="whoisResult"></pre>
+    <a href="/logout">Logout</a>
+</div>
+<script src="/static/script.js"></script>
+</body>
+</html>
